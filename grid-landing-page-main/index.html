@@ -5,56 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
 
   <title>Frontend Mentor | Grid landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
+  <div class="wrapper">    
+    <header>
+      <div class="title">
+        <span class="circle"></span>
+        <h1>Bridge Collective</h1>
+      </div>
+      <nav>
+        <a class="burguer" href="#"><img src="./assets/images/icon-menu.svg" class="icon-menu" width="24" height="24">
+        <img src="./assets/images/icon-close.svg" class="icon-close" width="24" height="24"></a>
+        <div class="overlay"></div>
+        <div id="navPanel">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Work</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Annual Report</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div>
+      </nav>   
+    </header>
+  
+    <main>
+      
+      <section class="hero">
+        <!-- Hero -->
+        <h2>A classroom for every child.</h2>
+        <p>We fund the schools, train the teachers, and measure what works — so every child we reach today becomes a graduate tomorrow.</p>
+      </section>
 
-  <!-- Nav -->
-  Bridge Collective
+      <section class="stats">
 
-  <!-- Hero -->
-  A classroom for every child.
+        <!-- Stats -->
+        <div class="stat-cell">
+        <header>
+          <img src="./assets/images/icon-sparkle.svg" width="25" height="25">
+          2.4M</header>      
+        <div>
+          <h3>Students reached</h3>
+          <span>Across 31 countries since 2011.</span>
+        </div>
+        </div>
+        <div class="stat-cell">
+        <header>
+          <img src="./assets/images/icon-plus.svg" width="25" height="25">
+          1,284</header>
+        <div>
+        <h3>Schools partnered</h3>
+        <span>In 14 countries, from Kenya to Guatemala.</span>
+        </div>
+        </div>
+        <div class="stat-cell">
+          <header>
+          <img src="./assets/images/icon-arrow-right.svg" width="25" height="25">
+        38K</header>
+        <div>
+        <h3>Teachers trained</h3>
+        <span>Equipped with modern tools and methodology.</span>
+        </div>
+        </div>
+        <div class="stat-cell">
+           <header>
+          <img src="./assets/images/icon-trending-up.svg" width="25" height="25">
+        3.1×</header>
+        <div>
+        <h3>Graduation lift</h3>
+        <span>schools outperform national averages 3x.</span>
+        </div>
+        </div>
 
-  We fund the schools, train the teachers, and measure what works — so every child we reach today becomes a graduate tomorrow.
+      </section>    
+    </main>
 
-  <!-- Stats -->
-  2.4M
-  Students reached
-  Across 31 countries since 2011.
+    <footer>
+      <!-- Footer -->
+      <div>© 2026 Bridge Collective</div>
+      <div>Registered charity 12345678</div>
 
-  1,284
-  Schools partnered
-  In 14 countries, from Kenya to Guatemala.
-
-  38K
-  Teachers trained
-  Equipped with modern tools and methodology.
-
-  3.1×
-  Graduation lift
-  Partner schools outperform national averages 3x.
-
-  <!-- Footer -->
-  © 2026 Bridge Collective
-  Registered charity 12345678
-
-  <!-- Menu panel — hidden until the hamburger is activated -->
-  About
-  Our Work
-  Partners
-  Annual Report
-  Donate
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>    
   </div>
+  <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/EmilioFI/FrontEndMentor" target="_blank">EmilioFI</a>.
+  </div>
+
+  
 </body>
 </html>
