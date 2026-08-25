@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
-  <title>Frontend Mentor | Results summary component</title>
-</head>
-<body>
-  <div class="modal">
-    <section class="result">
-      <h2>Your Result</h2>
-      <div class="circle">
-        <div class="score">76</div>
-        <span>of 100</span>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main>
+      <div class="modal">
+        <section class="result">
+          <h2>Your Result</h2>
+          <div class="circle" aria-label="You scored 76 out of 100">
+            <div class="score">76</div>
+            <span>of 100</span>
+          </div>
+          <h3>Great</h3>
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </section>
+        <section class="summary">
+            <h3>Summary</h3>
+            <ul class="summary-list" id="list">
+            </ul>
+          <button type="button" class="continue-btn">Continue</button>
+        </section>
       </div>
-      <h3>Great</h3>
-      <p>You scored higher than 65% of the people who have taken these tests.</p>
-    </section>
-    <section class="summary">
-        <h3>Summary</h3>
-        <ul class="summary-list" id="list">
-        </ul>
-      <button type="button" class="continue-btn">Continue</button>
-    </section>
-  </div>
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    </main>  
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/EmilioFI/FrontEndMentor/tree/main/grid-landing-page-main">EmilioFI</a>.
+    </footer>
+  </body>
 </html>

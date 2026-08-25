@@ -1,7 +1,4 @@
 const list = document.getElementById("list")
-const titleCategory = document.querySelector(".category")
-const scoreCategory = document.querySelector(".score-category")
-const iconImage = document.querySelector(".icon")
 const colorElements = {
     Reaction: { color: 'hsl(0, 100%, 67%)', bg: 'hsla(0, 100%, 67%, 0.08)' },
     Memory: { color: 'hsl(39, 100%, 56%)', bg: 'hsla(39, 100%, 56%, 0.08)' },
