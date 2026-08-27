@@ -1,138 +1,155 @@
+:root {
+  --White: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-500-alpha-10: hsla(217, 12%, 63%, 0.1);
+  --Grey-900: hsl(213, 19%, 18%);
+  --Grey-950: hsl(216, 12%, 8%);
+  --Orange-500: hsl(25, 97%, 53%);
+}
 
 body {
-    font-family: 'Overpass', sans-serif;
-    margin: 0;
-    background-color: hsl(216, 12%, 8%) ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    height: 100vh;
-
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  background-color: var(--Grey-950);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  height: 100vh;
 }
 
 span {
-    color: hsl(217, 12%, 63%);
-    font-size: 15px;
+  color: var(--Grey-500);
+  font-size: 15px;
 }
 
 .modal-rating {
-    position:static;    
-    width: 400px;
-    height: 400px;
-    box-sizing: border-box;
-    color: hsl(0, 100%, 100%);
-    background-color: hsl(214, 21%, 13%);
-    border-radius: 30px;
-    padding: 2em;
-
+  position: static;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  color: var(--White);
+  background-color: var(--Grey-900);
+  border-radius: 30px;
+  padding: 2em;
 }
 
 .attribution {
-    font-size: 0.6875rem;
-    text-align: center;
-    margin-top: 20px;
-    color: hsl(0, 100%, 100%);
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--White);
 }
+
 .attribution a {
-    color: hsl(228, 45%, 44%); }
+  color: hsl(228, 78%, 70%);
+}
 
 /* State rating start */
 
 .state-start {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 30px 0;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0;
 }
 
 .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: hsl(213, 19%, 18%);
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--Grey-500-alpha-10);
+  border-radius: 50%;
 }
 
 .btn {
-    border: 0;
-    color: hsl(217, 12%, 63%);
-    font-size: 15px;
-    font-weight: 700;
+  border: 0;
+  color: var(--Grey-500);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .btn:hover {
-    background-color: hsl(25, 97%, 53%);
-    color: hsl(213, 19%, 18%);
-    
+  background-color: var(--Orange-500);
+  color: var(--Grey-900);
+}
+
+.selected {
+  color: var(--Grey-900);
+  background-color: var(--White);
 }
 
 .submit-btn {
-    background-color: hsl(25, 97%, 53%);
-    color: hsl(216, 12%, 8%);
-    border: 0;
-    padding: 1em;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-weight: 700;
+  background-color: var(--Orange-500);
+  color: var(--Grey-950);
+  border: 0;
+  padding: 1em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
 }
 
 .submit-btn:hover {
-    background-color: hsl(0, 100%, 100%);
+  background-color: var(--White);
 }
+
 /* State tank you */
 
 .state-thanks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .thanks-image {
-    width: 160px;
-    height: auto;
-    margin: 1em 0 2em 0;
+  width: 160px;
+  height: auto;
+  margin: 1em 0 2em 0;
 }
 
 .rating-text {
-    color: hsl(25, 97%, 53%);
-    background-color: hsl(213, 19%, 18%);
-    border-radius: 30px;
-    padding: 0.4em 1.4em;
-    margin-bottom: 1em;
+  color: var(--Orange-500);
+  background-color: var(--Grey-900);
+  border-radius: 30px;
+  padding: 0.4em 1.4em;
+  margin-bottom: 1em;
+}
+
+#value-select {
+  color: var(--Orange-500);
 }
 
 .thanks-message {
-    text-align: center;
-    
+  text-align: center;
 }
 
 .thanks-message h2 {
-    font-size: 1.7em;
-    margin-bottom: 0.3em;
+  font-size: 1.7em;
+  margin-bottom: 0.3em;
 }
 
-/* Mobile styles*/
+.hidden {
+  display: none;
+}
+
+/* Mobile styles */
 
 @media screen and (max-width: 480px) {
-
-    .modal-rating {
-        position:static;    
-        width: 90%;
-        height: auto;
-        padding: 1.4em;
-    }
-
+  .modal-rating {
+    position: static;
+    width: 90%;
+    height: auto;
+    padding: 1.4em;
+  }
 }
