@@ -1,0 +1,110 @@
+:root {
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Gray-100: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Gray-100);
+  height: 100vh;
+  justify-content: center;
+}
+
+.cards-container {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--Transparent-white);
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-container h2 {
+  font-family: "Big Shoulders";
+  font-size: 2.2em;
+  color: var(--Gray-100);
+  text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5em;
+  background-color: var(--card-color);
+}
+
+.card p {
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.icon-card {
+  width: 64px;
+  height: 40px;
+}
+
+.card--sedans {
+  --card-color: var(--Gold-500);
+  border-radius: 10px 0 0 10px;
+}
+
+.card--suvs {
+  --card-color: var(--Cyan-800);
+}
+
+.card--luxury {
+  --card-color: var(--Green-950);
+  border-radius: 0 10px 10px 0;
+}
+
+.card__btn {
+  margin-top: 4em;
+  background-color: var(--Gray-100);
+  color: var(--card-color);
+  padding: 1em 2em;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 0.8em;
+}
+
+.card__btn:hover {
+  background-color: var(--card-color);
+  color: var(--Gray-100);
+  outline: 2px solid var(--Gray-100);
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* mobile */
+
+@media (max-width: 737px) {
+  body {
+    height: auto;
+    margin: 3em 1em;
+  }
+
+  .cards-container {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .card--sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card--luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
