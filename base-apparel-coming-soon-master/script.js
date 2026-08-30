@@ -8,10 +8,8 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const emailInput = document.getElementById("GET-email");
   const isValid = emailInput.checkValidity();
-  if (emailInput.value === "") {
-    return;
-  }
-  if (!isValid) {
+
+  if (!isValid || emailInput.value === "") {
     emailField.style.outline = "2px solid var(--Red-500)";
     infoMessage.textContent = "Please provide a valid email";
     infoMessage.style.color = "var(--Red-500)";
