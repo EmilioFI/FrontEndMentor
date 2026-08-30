@@ -1,44 +1,61 @@
 :root {
-  --Gold-500: hsl(31, 77%, 52%);
-  --Cyan-800: hsl(184, 100%, 22%);
-  --Green-950: hsl(179, 100%, 13%);
-  --Transparent-white: hsla(0, 0%, 100%, 0.75);
-  --Gray-100: hsl(0, 0%, 95%);
+  --gold-500: hsl(31, 77%, 52%);
+  --cyan-800: hsl(184, 100%, 22%);
+  --green-950: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --gray-100: hsl(0, 0%, 95%);
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background-color: var(--Gray-100);
-  height: 100vh;
+  background-color: var(--gray-100);
+  min-height: 100vh;
   justify-content: center;
 }
 
 .cards-container {
   max-width: 900px;
   margin: 0 auto;
-  color: var(--Transparent-white);
+  padding: 0;
+  color: var(--transparent-white);
   display: flex;
   flex-direction: row;
+  list-style-type: none;
 }
 
 .cards-container h2 {
-  font-family: "Big Shoulders";
+  font-family: "Big Shoulders", sans-serif;
   font-size: 2.2em;
-  color: var(--Gray-100);
+  color: var(--gray-100);
   text-transform: uppercase;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex: 1;
   justify-content: space-between;
   padding: 2.5em;
   background-color: var(--card-color);
 }
 
+.card--sedans {
+  --card-color: var(--gold-500);
+  border-radius: 10px 0 0 10px;
+}
+
+.card--suvs {
+  --card-color: var(--cyan-800);
+}
+
+.card--luxury {
+  --card-color: var(--green-950);
+  border-radius: 0 10px 10px 0;
+}
+
 .card p {
-  font-family: "Lexend Deca";
+  font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   line-height: 1.5em;
 }
@@ -48,34 +65,22 @@ body {
   height: 40px;
 }
 
-.card--sedans {
-  --card-color: var(--Gold-500);
-  border-radius: 10px 0 0 10px;
-}
-
-.card--suvs {
-  --card-color: var(--Cyan-800);
-}
-
-.card--luxury {
-  --card-color: var(--Green-950);
-  border-radius: 0 10px 10px 0;
-}
-
 .card__btn {
+  max-width: 150px;
   margin-top: 4em;
-  background-color: var(--Gray-100);
+  background-color: var(--gray-100);
   color: var(--card-color);
   padding: 1em 2em;
   border-radius: 20px;
   border-style: none;
   font-size: 0.8em;
+  transition: 0.3s;
 }
 
 .card__btn:hover {
   background-color: var(--card-color);
-  color: var(--Gray-100);
-  outline: 2px solid var(--Gray-100);
+  color: var(--gray-100);
+  outline: 2px solid var(--gray-100);
 }
 
 .attribution {
@@ -89,15 +94,13 @@ body {
 
 /* mobile */
 
-@media (max-width: 737px) {
+@media (max-width: 768px) {
   body {
-    height: auto;
     margin: 3em 1em;
   }
 
   .cards-container {
     width: 100%;
-    margin: 0 auto;
     flex-direction: column;
   }
   .card--sedans {
