@@ -1,0 +1,149 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8em 0;
+  gap: 15px;
+  background-color: var(--stone-100);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--stone-600);
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  background-color: var(--White);
+  border-radius: 25px;
+  padding: 2.4em;
+}
+
+.recipe__image-container {
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.recipe__image {
+  width: 100%;
+  height: auto;
+}
+
+.recipe__title {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  color: var(--stone-900);
+}
+
+.preparation {
+  background-color: var(--rose-50);
+  padding: 0.6em 1.8em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.preparation__title {
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 1.3em;
+  color: var(--rose-800);
+}
+
+.ingredients,
+.instructions {
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.ingredients__title,
+.instructions__title,
+.nutrition__title {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  color: var(--brown-800);
+}
+
+.preparation__list,
+.ingredients__list,
+.instructions__list {
+  padding-inline-start: 24px;
+  line-height: 1.6em;
+}
+
+.preparation__item,
+.ingredients__item,
+.instructions__item {
+  padding-inline-start: 15px;
+  margin-bottom: 0.5em;
+}
+
+.instructions__item::marker {
+  color: var(--rose-800);
+  font-weight: 700;
+}
+
+/* Nutrition section */
+
+.nutrition__table {
+  width: 100%;
+}
+
+.nutrition__table td {
+  border-bottom: 1px solid var(--stone-150);
+  padding: 0.8em 2em;
+}
+
+.nutrition__table tr:last-child td {
+  border-bottom: 0;
+}
+
+.nutrition__value {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+/* footer */
+
+.attribution {
+  margin: 1em 0;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Mobile styles*/
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .recipe {
+    border-radius: 0;
+  }
+
+  .recipe__image-container {
+    border-radius: 0;
+    margin-inline: -2.4em;
+    margin-block-start: -2.4em;
+  }
+}
