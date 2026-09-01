@@ -1,231 +1,227 @@
 @font-face {
-    font-family: 'InterVariable';
-    src: url('./assets/fonts/inter/inter-variable.ttf');
+  font-family: "InterVariable";
+  src: url("./assets/fonts/inter/inter-variable.ttf");
 }
 
 body {
-    margin: 0
+  margin: 0;
 }
 
 .wrapper {
-    color: hsl(0, 0%, 100%);
-    font-family: 'InterVariable';
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: hsl(228, 99%, 58%)
+  color: hsl(0, 0%, 100%);
+  font-family: "InterVariable";
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: hsl(228, 99%, 58%);
 }
 
 header {
- position:relative;
+  position: relative;
 }
 
-header, footer {
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    box-sizing: border-box;
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  box-sizing: border-box;
 }
 
 .title {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    gap:5px;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-left: 40px;
 }
 
 .circle {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border-radius: 50%;
-    align-self:auto;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  align-self: auto;
 }
 
 .title h1 {
-    font-size: 14px;
-    font-weight: normal;
-    align-content: center;
+  font-size: 14px;
+  font-weight: normal;
+  align-content: center;
 }
 
 nav {
-    padding: 1em 2em;
-    align-items: baseline;
+  padding: 1em 2em;
+  align-items: baseline;
 }
 
 main {
-    display: flex;
-    height: 600px;    
+  display: flex;
+  height: 600px;
 }
 
 .hero {
-    width: 46%;
-    box-sizing: border-box;
-    padding-left: 2em;
-    padding-right: 10em;
-    align-content: center;
-    border: 1px solid #ffffff2f;
+  width: 46%;
+  box-sizing: border-box;
+  padding-left: 2em;
+  padding-right: 10em;
+  align-content: center;
+  border: 1px solid #ffffff2f;
 }
 
 .hero h2 {
-    font-size:3.6em;
+  font-size: 3.6em;
 }
-
 
 .stats {
-    width: 54%;
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;    
+  width: 54%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
 }
 
-
 .stat-cell {
-    position:relative;
-    padding: 2em;
-    border: 1px solid #ffffff2f;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 200px;
+  padding: 2em;
+  border: 1px solid #ffffff2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 200px;
 }
 
 .stat-cell header {
-    display:flex;
-    font-size: 2em;
-    justify-content: space-between;    
+  display: flex;
+  font-size: 2em;
+  justify-content: space-between;
 }
 
 .stat-cell:hover {
-    background-color: hsl(228, 100%, 62%);
+  background-color: hsl(228, 100%, 62%);
 }
 
 .stat-cell h3 {
-    font-size: 1em;
-    margin: 0;
+  font-size: 1em;
+  margin: 0;
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 2em;
 }
 
 .attribution {
-    margin: 10px 0;
-    font-size: 11px;
-    font-family: 'Intervariable';
-    text-align: center; 
+  margin: 10px 0;
+  font-size: 11px;
+  font-family: "Intervariable";
+  text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 /* menu */
 
 #navPanel {
-    position: absolute;
-    top: 60px;
-    left: 73%;
-    width: 27%;
-    height: 660px;
-    box-sizing: border-box;
-    background-color: hsl(228, 99%, 58%);
-    border: 1px solid #ffffff2f;
-    z-index: 10;
-    transform: translateY(-100vh);
-    transition: transform 0.5s;
-        
+  position: absolute;
+  top: 60px;
+  left: 73%;
+  width: 27%;
+  height: 660px;
+  box-sizing: border-box;
+  background-color: hsl(228, 99%, 58%);
+  border: 1px solid #ffffff2f;
+  z-index: 10;
+  transform: translateY(-100vh);
+  transition: transform 0.5s;
 }
 
 #navPanel.open {
-    visibility:visible;
-    transform: translateY(0px);
-    transition: transform 0.5s;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: transform 0.5s;
 }
 
 #navPanel a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 32px;  
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
 }
 
 #navPanel a:hover {
-    text-decoration:underline;
+  text-decoration: underline;
 }
 
 #navPanel ul {
-    list-style-type: none;
-    padding: 2em 3em;
+  list-style-type: none;
+  padding: 2em 3em;
 }
 #navPanel li {
-    margin-bottom: 1em;
-    text-align: right;
+  margin-bottom: 1em;
+  text-align: right;
 }
 
 .burguer .icon-close {
-    display:none
+  display: none;
 }
 
 .burguer.open .icon-menu {
-    display: none
+  display: none;
 }
 
 .burguer.open .icon-close {
-    display: block
+  display: block;
 }
 
-.overlay {    
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 660px;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    display:none;
+.overlay {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 660px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  display: none;
 }
 
 .overlay.open {
-     display: block;
+  display: block;
 }
 
 body.open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Mobile styles*/
 @media screen and (max-width: 840px) {
-    main {
-        flex-flow: column wrap;
-        height: auto;
-    }
-    
-    .hero {
-        width: 100%;
-        padding-right: 1em;
-        padding-bottom: 1em;
-        height: 500px;
-    }
+  main {
+    flex-flow: column wrap;
+    height: auto;
+  }
 
-    .stats {
-    display:flex;
-    flex-direction:column;
+  .hero {
     width: 100%;
-    }
-    
-    #navPanel {
-    top:60px;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    height: 500px;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #navPanel {
+    top: 60px;
     left: 0;
     width: 100%;
     height: 500px;
-    }
+  }
 
-    .overlay {  
+  .overlay {
     height: 100vh;
-    }
-
+  }
 }
