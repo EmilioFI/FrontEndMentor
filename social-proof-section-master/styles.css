@@ -1,0 +1,221 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "League Spartan";
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 15px;
+  background-image:
+    url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position:
+    0 0,
+    bottom right;
+}
+
+.social-proof {
+  max-width: 1440px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "header rating"
+    "testimonial testimonial";
+  padding: 8em;
+}
+
+.social-proof__header {
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  margin-bottom: 4em;
+}
+
+.social-proof__title {
+  color: var(--very-dark-magenta);
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.social-proof__description {
+  color: var(--very-dark-magenta);
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+/* rating section */
+
+.social-proof__rating {
+  display: flex;
+  flex-direction: column;
+  grid-area: rating;
+  align-items: flex-end;
+}
+
+.social-proof__rating-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-proof__rating-item {
+  display: flex;
+  gap: 20px;
+  width: 28em;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 8px;
+  padding: 1.4em 2em;
+  margin: 1em 0;
+}
+
+@media (min-width: 769px) {
+  .social-proof__rating-list li:nth-child(2) {
+    transform: translateX(-50px);
+  }
+
+  .social-proof__rating-list li:first-child {
+    transform: translateX(-100px);
+  }
+}
+
+.rating-stars {
+  width: 131px;
+  height: 20px;
+  background-image: url("./images/icon-star.svg");
+  background-repeat: space no-repeat;
+  background-size: 22px 22px;
+}
+
+.rating-text {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+/* testimonial */
+
+.social-proof__testimonial {
+  grid-area: testimonial;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+@media (min-width: 769px) {
+  .social-proof__testimonial article:nth-child(2) {
+    transform: translateY(15px);
+  }
+
+  .social-proof__testimonial article:last-child {
+    transform: translateY(30px);
+  }
+}
+
+.testimonial__card {
+  width: 33.33%;
+  background-color: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  border-radius: 10px;
+  padding: 3em 2.2em;
+}
+
+.testimonial__meta {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.testimonial__state {
+  color: var(--soft-pink);
+}
+
+.testimonial__quote {
+  margin: 1em 0 0;
+  line-height: 1.5em;
+}
+
+/* footer */
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    height: auto;
+    background-image:
+      url("./images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+  }
+
+  .social-proof {
+    display: flex;
+    flex-direction: column;
+    padding: 6em 1.6em 3em;
+    max-width: 100%;
+  }
+
+  .social-proof__header {
+    margin-bottom: 0;
+  }
+  .social-proof__title {
+    text-align: center;
+    font-size: 2.8em;
+  }
+  .social-proof__description {
+    text-align: center;
+  }
+
+  .social-proof__rating {
+    align-items: stretch;
+  }
+
+  .social-proof__rating-item {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 0 0;
+    padding: 1em 0;
+  }
+
+  .social-proof__testimonial {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .testimonial__card {
+    width: auto;
+    margin-bottom: 0.6em;
+  }
+}
