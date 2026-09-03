@@ -11,13 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Social proof section</title>
   </head>
   <body>
@@ -33,23 +34,26 @@
           services.
         </p>
       </header>
-      <section class="social-proof__rating">
+      <section class="social-proof__rating" aria-label="Customer Ratings">
         <ul class="social-proof__rating-list">
           <li class="social-proof__rating-item">
-            <div class="rating-stars"></div>
+            <div class="rating-stars" aria-hidden="true"></div>
             <span class="rating-text">Rated 5 Stars in Reviews</span>
           </li>
           <li class="social-proof__rating-item">
-            <div class="rating-stars"></div>
+            <div class="rating-stars" aria-hidden="true"></div>
             <span class="rating-text">Rated 5 Stars in Report Guru</span>
           </li>
           <li class="social-proof__rating-item">
-            <div class="rating-stars"></div>
+            <div class="rating-stars" aria-hidden="true"></div>
             <span class="rating-text">Rated 5 Stars in BestTech</span>
           </li>
         </ul>
       </section>
-      <section class="social-proof__testimonial">
+      <section
+        class="social-proof__testimonial"
+        aria-label="Customer Testimonials"
+      >
         <article class="testimonial__card">
           <footer class="testimonial__meta">
             <img

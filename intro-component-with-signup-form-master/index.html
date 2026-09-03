@@ -11,47 +11,148 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 
     <title>Frontend Mentor | Intro component with sign up form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 0.6875rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Learn to code by watching others</h1>
-
-        <p>
+    <main class="signup-master">
+      <header class="signup-master__header">
+        <h1 class="signup-master__title">Learn to code by watching others</h1>
+        <p class="signup-master__description">
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
           invaluable.
         </p>
       </header>
-      <section>
-        <header>Try it free 7 days then $20/mo.</header>
-        <form>
-          thereafter First Name Last Name Email Address Password Claim your free
-          trial
+      <section class="signup-master__body">
+        <h2 class="signup-master__header-form">
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </h2>
+        <form class="signup-master__form" id="signup-form" novalidate>
+          <div class="signup-master__form-field">
+            <label class="sr-only" for="GET-firstname">First Name</label>
+            <input
+              class="signup-master__form-input"
+              id="GET-firstname"
+              aria-describedby="firstname-message"
+              aria-invalid="false"
+              type="text"
+              placeholder="First Name"
+              required
+            />
+            <img
+              class="warning-icon hidden"
+              src="./images/icon-error.svg"
+              alt=""
+            />
+            <span
+              class="warning-message hidden"
+              id="firstname-message"
+              aria-live="polite"
+              >First Name cannot be empty</span
+            >
+          </div>
+          <div class="signup-master__form-field">
+            <label class="sr-only" for="GET-lastname">Last Name</label>
+            <input
+              class="signup-master__form-input"
+              id="GET-lastname"
+              aria-describedby="lastname-message"
+              aria-invalid="false"
+              type="text"
+              placeholder="Last Name"
+              required
+            />
+            <img
+              class="warning-icon hidden"
+              src="./images/icon-error.svg"
+              alt=""
+            />
+            <span
+              class="warning-message hidden"
+              id="lastname-message"
+              aria-live="polite"
+              >Last Name cannot be empty</span
+            >
+          </div>
+          <div class="signup-master__form-field">
+            <input
+              class="signup-master__form-input"
+              id="GET-email"
+              aria-describedby="email-message"
+              aria-invalid="false"
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+            <label class="sr-only" for="GET-email">Email Address</label>
+            <img
+              class="warning-icon hidden"
+              src="./images/icon-error.svg"
+              alt=""
+            />
+            <span
+              class="warning-message hidden"
+              id="email-message"
+              aria-live="polite"
+              >Looks like this is not an email</span
+            >
+          </div>
+          <div class="signup-master__form-field">
+            <input
+              class="signup-master__form-input"
+              id="GET-password"
+              aria-describedby="password-message"
+              aria-invalid="false"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <label class="sr-only" for="GET-password">Password</label>
+            <img
+              class="warning-icon hidden"
+              src="./images/icon-error.svg"
+              alt=""
+            />
+            <span
+              class="warning-message hidden"
+              id="password-message"
+              aria-live="polite"
+              >Password cannot be empty</span
+            >
+          </div>
+          <span class="info-message hidden" id="form-message" aria-live="polite"
+            >Form received. Please check your email</span
+          >
+          <button
+            class="signup-master__form-submit"
+            type="submit"
+            aria-label=""
+          >
+            Claim your free trial
+          </button>
+
+          <p class="signup-master__form-disclaim">
+            <small> By clicking the button, you are agreeing to our</small>
+            <a href="#">Terms and Services</a>
+          </p>
         </form>
-        <footer>
-          By clicking the button, you are agreeing to our Terms and Services
-        </footer>
       </section>
     </main>
 
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">EmilioFI</a>.
     </footer>
   </body>
 </html>
