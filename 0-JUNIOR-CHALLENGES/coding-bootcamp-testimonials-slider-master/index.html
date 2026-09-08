@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  </head>
+  <body>
+    <main class="testimonial-slider">
+      <article class="testimonial-slider__card">
+        <blockquote class="testimonial-slider__quote">
+          “ I’ve been interested in coding for a while but never taken the jump,
+          until now. I couldn’t recommend this course enough. I’m now in the job
+          of my dreams and so excited about the future. ”
+        </blockquote>
+        <div class="testimonial-slider__img-container">
+          <div class="testimonial-slider__slider">
+            <button
+              class="testimonial-slider__button"
+              aria-label="go to previous testimonial"
+            >
+              <img
+                class="testimonial-slider__prev"
+                src="./images/icon-prev.svg"
+              />
+            </button>
+            <button class="testimonial-slider__button">
+              <img
+                class="testimonial-slider__next"
+                src="./images/icon-next.svg"
+              />
+            </button>
+          </div>
+          <img
+            class="testimonial-slider__avatar"
+            src="./images/image-tanya.jpg"
+            alt=""
+          />
+        </div>
+        <footer class="testimonial-slider__author">
+          <span class="testimonial-slider__name">Tanya Sinclair </span>
+          <span class="testimonial-slider__role">UX Engineer</span>
+        </footer>
+      </article>
+      <article class="testimonial-slider__card card-hidden">
+        <blockquote class="testimonial-slider__quote">
+          “ If you want to lay the best foundation possible I’d recommend taking
+          this course. The depth the instructors go into is incredible. I now
+          feel so confident about starting up as a professional developer. ”
+        </blockquote>
+        <div class="testimonial-slider__img-container">
+          <div class="testimonial-slider__slider">
+            <button
+              class="testimonial-slider__button"
+              aria-label="go to previous testimonial"
+            >
+              <img
+                class="testimonial-slider__prev"
+                src="./images/icon-prev.svg"
+                alt="previous testimonial"
+              />
+            </button>
+            <button
+              class="testimonial-slider__button"
+              aria-label="go to next testimonial"
+            >
+              <img
+                class="testimonial-slider__next"
+                src="./images/icon-next.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <img
+            class="testimonial-slider__avatar"
+            src="./images/image-john.jpg"
+            alt=""
+          />
+        </div>
+        <footer class="testimonial-slider__author">
+          <span class="testimonial-slider__name">John Tarkpor</span>
+          <span class="testimonial-slider__role"
+            >Junior Front-end Developer</span
+          >
+        </footer>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">EmilioFI</a>.
+    </footer>
+  </body>
+</html>
