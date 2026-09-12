@@ -1,87 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <main class="social-dashboard">
+      <header class="social-dashboard__header">
+        <h1 class="social-dashboard__title">Social Media Dashboard</h1>
+        <span class="social-dashboard__subtitle"> Total Followers: 23,004</span>
+        <div class="toggle__label" id="theme-label">Dark Mode</div>
+        <button
+          class="toggle"
+          role="switch"
+          aria-checked="false"
+          aria-labelledby="theme-label"
+        >
+          <div class="slider"></div>
+        </button>
+      </header>
+      <section class="followers">
+        <article class="followers__card followers__card--facebook">
+          <div class="followers__card-header">
+            <img
+              class="social-icon"
+              src="./images/icon-facebook.svg"
+              alt="Facebook"
+            />
+            <span class="followers__username">@nathanf</span>
+          </div>
+          <span class="followers__number">1987</span>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+          <span class="followers__label">Followers</span>
+          <span class="change-stats change-stats--up">12 Today</span>
+        </article>
+        <article class="followers__card followers__card--twitter">
+          <div class="followers__card-header">
+            <img
+              class="social-icon"
+              src="./images/icon-twitter.svg"
+              alt="Twitter"
+            />
+            <span class="followers__username">@nathanf</span>
+          </div>
+          <span class="followers__number">1044</span>
+          <span class="followers__label">Followers</span>
+          <span class="change-stats change-stats--up">99 Today</span>
+        </article>
+        <article class="followers__card followers__card--instagram">
+          <div class="followers__card-header">
+            <img
+              class="social-icon"
+              src="./images/icon-instagram.svg"
+              alt="Instagram"
+            />
+            <span class="followers__username">@realnathanf</span>
+          </div>
+          <span class="followers__number">11k</span>
+          <span class="followers__label">Followers</span>
+          <span class="change-stats change-stats--up">1099 Today</span>
+        </article>
+        <article class="followers__card followers__card--youtube">
+          <div class="followers__card-header">
+            <img
+              class="social-icon"
+              src="./images/icon-youtube.svg"
+              alt="YouTube"
+            />
+            <span class="followers__username">Nathan F.</span>
+          </div>
+          <span class="followers__number">8239</span>
+          <span class="followers__label">Subscribers</span>
+          <span class="change-stats change-stats--down">144 Today</span>
+        </article>
+      </section>
+      <section class="overview">
+        <h2 class="overview__title">Overview - Today</h2>
+        <article class="overview__card">
+          <span class="overview__label">Page Views</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-facebook.svg"
+            alt="Facebook"
+          />
+          <span class="overview__number">87</span>
+          <span class="change-stats change-stats--up change-stats--overview"
+            >3%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Likes</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-facebook.svg"
+            alt="Facebook"
+          />
+          <span class="overview__number">52</span>
+          <span class="change-stats change-stats--down change-stats--overview"
+            >2%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Likes</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-instagram.svg"
+            alt="Instagram"
+          />
+          <span class="overview__number">5462</span>
+          <span class="change-stats change-stats--up change-stats--overview"
+            >2257%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Profile Views</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-instagram.svg"
+            alt="Instagram"
+          />
+          <span class="overview__number">52k</span>
+          <span class="change-stats change-stats--up change-stats--overview"
+            >1375%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Retweets</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-twitter.svg"
+            alt="Twitter"
+          />
+          <span class="overview__number">117</span>
+          <span class="change-stats change-stats--up change-stats--overview"
+            >303%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Likes</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-twitter.svg"
+            alt="Twitter"
+          />
+          <span class="overview__number">507</span>
+          <span class="change-stats change-stats--up change-stats--overview"
+            >553%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Likes</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-youtube.svg"
+            alt="YouTube"
+          />
+          <span class="overview__number">107</span>
+          <span class="change-stats change-stats--down change-stats--overview"
+            >19%</span
+          >
+        </article>
+        <article class="overview__card">
+          <span class="overview__label">Total Views</span>
+          <img
+            class="social-icon social-icon--overview"
+            src="./images/icon-youtube.svg"
+            alt="YouTube"
+          />
+          <span class="overview__number">1407</span>
+          <span class="change-stats change-stats--down change-stats--overview"
+            >12%</span
+          >
+        </article>
+      </section>
+    </main>
 
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">EmilioFI</a>.
+    </footer>
+  </body>
 </html>
