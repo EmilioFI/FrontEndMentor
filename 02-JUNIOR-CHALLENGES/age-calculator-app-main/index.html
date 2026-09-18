@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="age-calculator">
+      <form class="age-calculator__form">
+        <label class="age-calculator__label-field" for="get-day">Day</label>
+        <input
+          class="age-calculator__input-field"
+          id="get-day"
+          type="text"
+          placeholder="DD"
+          required
+        />
+        <span class="age-calculator__warning-message"></span>
+        <label class="age-calculator__label-field" for="get-month">Month</label>
+        <input
+          class="age-calculator__input-field"
+          id="get-month"
+          type="text"
+          placeholder="MM"
+          required
+        />
+        <span class="age-calculator__warning-message"></span>
+        <label class="age-calculator__label-field" for="get-year">Year</label>
+        <input
+          class="age-calculator__input-field"
+          id="get-year"
+          type="text"
+          placeholder="YYYY"
+          required
+        />
+        <span class="age-calculator__warning-message"></span>
+        <button
+          class="age-calculator__submit"
+          type="submit"
+          aria-label="calculate your age"
+        >
+          <img
+            class="age-calculator__submit-img"
+            src="./assets/images/icon-arrow.svg"
+          />
+        </button>
+      </form>
+      <section class="age-calculator__result-view">
+        <span class="age-calculator__result-value">--</span>
+        <span class="age-calculator__result-label">years</span>
+        <span class="age-calculator__result-value">--</span>
+        <span class="age-calculator__result-label">months</span>
+        <span class="age-calculator__result-value">--</span>
+        <span class="age-calculator__result-label">days</span>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Emilio FI</a>.
+    </footer>
+  </body>
+</html>
