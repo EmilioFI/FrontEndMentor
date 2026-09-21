@@ -25,34 +25,42 @@
   </head>
   <body>
     <main class="age-calculator">
-      <form class="age-calculator__form">
-        <label class="age-calculator__label-field" for="get-day">Day</label>
-        <input
-          class="age-calculator__input-field"
-          id="get-day"
-          type="text"
-          placeholder="DD"
-          required
-        />
-        <span class="age-calculator__warning-message"></span>
-        <label class="age-calculator__label-field" for="get-month">Month</label>
-        <input
-          class="age-calculator__input-field"
-          id="get-month"
-          type="text"
-          placeholder="MM"
-          required
-        />
-        <span class="age-calculator__warning-message"></span>
-        <label class="age-calculator__label-field" for="get-year">Year</label>
-        <input
-          class="age-calculator__input-field"
-          id="get-year"
-          type="text"
-          placeholder="YYYY"
-          required
-        />
-        <span class="age-calculator__warning-message"></span>
+      <form class="age-calculator__form" novalidate>
+        <div class="age-calculator__field">
+          <label class="age-calculator__label-field" for="get-day">Day</label>
+          <input
+            class="age-calculator__input-field"
+            id="get-day"
+            type="text"
+            placeholder="DD"
+            required
+          />
+          <span class="age-calculator__warning-message"></span>
+        </div>
+        <div class="age-calculator__field">
+          <label class="age-calculator__label-field" for="get-month"
+            >Month</label
+          >
+          <input
+            class="age-calculator__input-field"
+            id="get-month"
+            type="text"
+            placeholder="MM"
+            required
+          />
+          <span class="age-calculator__warning-message"></span>
+        </div>
+        <div class="age-calculator__field">
+          <label class="age-calculator__label-field" for="get-year">Year</label>
+          <input
+            class="age-calculator__input-field"
+            id="get-year"
+            type="text"
+            placeholder="YYYY"
+            required
+          />
+          <span class="age-calculator__warning-message"></span>
+        </div>
         <button
           class="age-calculator__submit"
           type="submit"
